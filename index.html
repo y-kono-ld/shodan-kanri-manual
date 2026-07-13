@@ -491,6 +491,10 @@
               <strong>入力不要：</strong> フォーム下部の <code class="field">承認結果(自動記入・入力不要)</code> セクションは、
               承認フローが自動的に書き込みます。空欄のまま「保存」してください。
             </div>
+            <div class="note warn">
+              <strong>申請者は必ず候補から選択：</strong> <code class="field">申請者</code> 欄は、名前を入力するだけでは保存されません。
+              候補一覧に表示されたご自身の名前をクリックして選択してください。候補を選ばずに文字だけ入力すると、申請者が空欄のまま保存されてしまいます。
+            </div>
           </div>
         </div>
 
@@ -557,6 +561,10 @@
             <div class="note">
               <strong>最後に必ず：</strong> 入力が終わったら <code class="field">記録ステータス</code> を
               <span class="pill pill-pending">記録入力済</span> に変更してから保存してください。これをきっかけに上長・役員への記録確認依頼が送信されます。
+            </div>
+            <div class="note warn">
+              <strong>運用ルール：</strong> 申請者(BY)が手入力してよい <code class="field">記録ステータス</code> の値は
+              <span class="pill pill-pending">記録入力済</span> だけです。それ以外の値(確認完了など)は承認フローが自動的に書き込むため、手動で変更しないでください。
             </div>
           </div>
         </div>
@@ -713,6 +721,11 @@
               基本的に操作は不要です。記録確認完了後の確認依頼メール送信、先方回答の受付、PDF控えの送付まで、すべて自動で進みます。
               ただし先方から <span class="pill pill-no">修正をお願いします</span> の回答があった場合は通知が届くため、指摘内容を確認して第2部の記録を修正してください。
             </p>
+            <div class="note warn">
+              <strong>修正後の再送手順：</strong> 第2部の記録を修正しただけでは、先方への確認依頼は再送されません。
+              修正が終わったら <code class="field">記録ステータス</code> を手動で
+              <span class="pill pill-pending">記録入力済</span> に戻して保存してください。この変更をきっかけに先方確認依頼メールが再送されます。
+            </div>
           </div>
         </div>
 
@@ -790,6 +803,10 @@
         <details class="faq">
           <summary>先方確認プロセスはすべての部門で使えますか？</summary>
           <p>はい。全11部門(01農産〜11物流部)および00：テスト用チャネルすべてでご利用いただけます。</p>
+        </details>
+        <details class="faq">
+          <summary>記録がロックされて動かない、フローがエラーで止まったなど、自分では解決できない場合は？</summary>
+          <p>システム管理者までご連絡ください。管理者はSharePoint上でリストに直接アクセスできるため、ロックされた記録の修正やステータスの訂正など、通常のTeams操作では対応できない例外的な処理を行えます。ご自身でSharePointの列やステータスを直接編集することは避けてください。</p>
         </details>
 
         <footer>
