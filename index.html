@@ -210,7 +210,12 @@
     border-radius: 0 8px 8px 0; font-size: 0.92rem; color: var(--ink-soft); max-width: 68ch; margin: 0.9rem 0;
   }
   .note strong { color: var(--ink); }
-  .note.warn { border-left-color: var(--status-no); }
+  .note.warn {
+    border-left-color: var(--status-no); border-left-width: 5px;
+    background: var(--status-no-soft); font-size: 1.05rem; font-weight: 500;
+    padding: 1.05rem 1.2rem; color: var(--ink);
+  }
+  .note.warn strong { color: var(--status-no); font-size: 1.1em; }
 
   /* ---------- Pills ---------- */
   .pill {
@@ -633,10 +638,14 @@
         <div class="step">
           <div class="step-num">3</div>
           <div>
-            <h3>記録の確認をする(第2部)</h3>
+            <h3>記録の確認をする(第2部・先方確認後)</h3>
+            <div class="note warn">
+              <strong>先方確認が先に行われます：</strong> 申請者が記録を入力しても、すぐに上長へ確認依頼が届くわけではありません。
+              まず取引先(先方)へ内容確認のメールが自動送信され、先方が<span class="pill pill-ok">問題ありません</span>と回答して初めて、上長に記録確認依頼が届きます。
+              詳しい流れは後述の「先方確認プロセス」をご覧ください。
+            </div>
             <p>
-              申請者が商談記録を入力し、<code class="field">記録ステータス</code> を <span class="pill pill-pending">記録入力済</span> にして保存すると、
-              上長に記録確認依頼が届きます。内容を確認し、問題がなければ「確認済」をクリックします。
+              先方が<span class="pill pill-ok">問題ありません</span>と回答すると、上長に記録確認依頼が届きます。内容を確認し、問題がなければ「確認済」をクリックします。
             </p>
             <div class="note">
               <strong>内容を確認してから判断できます：</strong> このカードにも、商談内容・先方要件・今後の取組予定などの記録内容が全文表示されます。
@@ -665,10 +674,11 @@
         <div class="step">
           <div class="step-num">1</div>
           <div>
-            <h3>記録の最終確認を行う(第2部)</h3>
+            <h3>記録の最終確認を行う(第2部・先方確認後)</h3>
             <p>
               上長が記録確認を終えると、続けて役員に記録確認依頼が届きます。内容を確認して「確認済」をクリックすると、
-              <code class="field">記録ステータス</code> が <span class="pill pill-ok">確認完了</span> となり、一連の手続きが完了します。
+              <code class="field">記録ステータス</code> が <span class="pill pill-ok">確認完了</span> となって記録が完全にロックされ、
+              先方へ控えのPDF(商談記録確認書)が自動送付されて一連の手続きが完了します。
             </p>
             <div class="note">
               <strong>内容を確認してから判断できます：</strong> このカードにも記録内容が全文表示され、カード下部の「アイテムリンク」からSharePoint上の元の記録を直接開くこともできます。
@@ -685,14 +695,15 @@
       <section id="confirm" style="margin-top: 3.25rem;">
         <h2>先方確認プロセス</h2>
         <p>
-          第2部(商談記録)の確認が完了(<span class="pill pill-ok">確認完了</span>)すると、記録内容を取引先(先方)に確認していただくプロセスが自動的に始まります。
-          先方の回答が「問題ありません」であれば、上長・役員による最終確認を経て、控えのPDF(商談記録確認書)が先方に自動送付されます。
+          申請者が商談記録を入力し <code class="field">記録ステータス</code> を <span class="pill pill-pending">記録入力済</span> にすると、
+          <strong>上長・役員による確認より先に</strong>、記録内容を取引先(先方)に確認していただくプロセスが自動的に始まります。
+          先方の回答が「問題ありません」であれば、そこから上長・役員による最終確認を経て、控えのPDF(商談記録確認書)が先方に自動送付されます。
         </p>
 
         <div class="flow">
           <div class="flow-row">
             <div class="flow-chain">
-              <span class="flow-node n-ok">記録確認完了</span>
+              <span class="flow-node n-by">記録入力済(BYが保存)</span>
               <span class="flow-arrow">→</span>
               <span class="flow-node n-by">先方へ確認依頼メール送信(自動)</span>
               <span class="flow-arrow">→</span>
