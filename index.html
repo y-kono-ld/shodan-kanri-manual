@@ -702,7 +702,7 @@
         </div>
 
         <h3>先方の回答による分岐</h3>
-        <div class="role-cards" style="grid-template-columns: repeat(2, 1fr);">
+        <div class="role-cards" style="grid-template-columns: repeat(3, 1fr);">
           <div class="role-card by">
             <div class="role-badge" style="background: var(--status-ok-soft); color: var(--status-ok);"><span class="pill pill-ok">問題ありません</span></div>
             <p>記録が編集ロックされ、先方の回答内容を添えて上長→役員の順に最終確認カードが届きます。両者が確認済にすると、控えのPDFが先方に自動送付され、手続きが完了します。</p>
@@ -710,6 +710,10 @@
           <div class="role-card exec">
             <div class="role-badge" style="background: var(--status-no-soft); color: var(--status-no);"><span class="pill pill-no">修正をお願いします</span></div>
             <p>申請者(BY)宛てにTeamsのワークフローチャットで修正依頼の通知が届きます。指摘内容・コメントを確認し、第2部の記録を修正のうえ再度ご確認いただきます。</p>
+          </div>
+          <div class="role-card mgr">
+            <div class="role-badge" style="background: var(--status-pending-soft); color: var(--status-pending);"><span class="pill pill-pending">回答なし</span></div>
+            <p>確認依頼から14日を過ぎても先方から回答がない場合、または上長が手動で切り替えた場合、先方確認を待たずに社内(上長・役員)の確認だけで記録を確定する経路に移行します。</p>
           </div>
         </div>
 
@@ -726,6 +730,9 @@
               修正が終わったら <code class="field">記録ステータス</code> を手動で
               <span class="pill pill-pending">記録入力済</span> に戻して保存してください。この変更をきっかけに先方確認依頼メールが再送されます。
             </div>
+            <p>
+              先方確認依頼の送信から<strong>4日</strong>経過しても回答がない場合は、Teamsのワークフローチャットに督促の通知が届きます。取引先へ改めてご連絡いただくか、必要に応じて記録内容を見直してください。
+            </p>
           </div>
         </div>
 
@@ -739,6 +746,17 @@
             </p>
             <div class="note">
               役員の確認が完了すると記録が完全にロックされ、先方へ控えのPDF(商談記録確認書)が自動送付されます。この時点で一連の手続きがすべて終了します。
+            </div>
+            <p>
+              先方確認依頼から<strong>14日</strong>を経過しても回答がない場合は、<code class="field">記録ステータス</code> が自動的に <span class="pill pill-pending">社内確認中</span> に切り替わり、
+              先方確認を待たずに上長→役員の確認だけで記録を確定する経路に移行します。取引先へ連絡が取れないなど、先方確認を待てない事情がある場合は、
+              上長が <code class="field">記録ステータス</code> を手動で <span class="pill pill-no">先方回答なし</span> に変更することで、この経路をすぐに開始することもできます。
+            </p>
+            <div class="note warn">
+              <strong>タイトルでひと目で分かります：</strong> この経路の確認カードは、タイトルに「※先方回答なし案件」と明記されます。通常の確認カードと見分けがつきます。控えのPDF送付はこの経路では行われません。
+            </div>
+            <div class="note warn">
+              <strong>先方合意の証跡にはなりません：</strong> この経路で確定した記録は、社内での確認が完了したことを示すものであり、取引先による合意の証跡にはなりません。あくまで社内記録としての確定である点にご留意ください。
             </div>
           </div>
         </div>
@@ -803,6 +821,10 @@
         <details class="faq">
           <summary>先方確認プロセスはすべての部門で使えますか？</summary>
           <p>はい。全11部門(01農産〜11物流部)および00：テスト用チャネルすべてでご利用いただけます。</p>
+        </details>
+        <details class="faq">
+          <summary>取引先の担当者と連絡が取れず、先方確認を進められません</summary>
+          <p>4日経過で督促通知が届き、14日経過すると記録ステータスが自動的に <span class="pill pill-pending">社内確認中</span> に切り替わって先方確認を待たない経路に移行します。急ぎの場合は、上長が記録ステータスを手動で <span class="pill pill-no">先方回答なし</span> に変更することで、この経路をすぐに開始できます。詳しくは「先方確認プロセス」の章をご覧ください。</p>
         </details>
         <details class="faq">
           <summary>記録がロックされて動かない、フローがエラーで止まったなど、自分では解決できない場合は？</summary>
