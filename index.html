@@ -2,6 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>商談管理アプリ 操作マニュアル(詳細版)</title>
 <style>
   :root { --green: #18643E; --green-light: #E8F3ED; --blue: #2C5FA8; --amber: #B87700; --gray: #666; }
@@ -48,6 +49,15 @@
     table { page-break-inside: avoid; break-inside: avoid; }
     .pagebreak { page-break-before: always; break-before: page; }
   }
+
+/* --- スマホ・タブレット表示の最適化(2026-08-31 追加) --- */
+@media (max-width: 640px) {
+  .page { padding-left: 16px !important; padding-right: 16px !important; }
+  th { white-space: normal !important; }
+  table { table-layout: fixed; width: 100%; word-break: break-word; }
+  h1 { font-size: 22px !important; }
+  h2 { font-size: 18px !important; }
+}
 </style>
 </head>
 <body>
@@ -55,9 +65,9 @@
 <header class="hero">
   <h1>商談管理アプリ 操作マニュアル</h1>
   <p>― 申請・記録入力・一覧確認をアプリでかんたんに ―【詳細版】</p>
-  <p class="ver">2026年8月7日改訂版(アプリ v73 対応)/管理者: 販促企画部 鴻野</p>
+  <p class="ver">2026年8月31日改訂版(アプリ v73 対応)/管理者: 販促企画部 鴻野</p>
 </header>
-<div style="background:#E8F3ED;border:2px solid #18643E;border-radius:10px;margin:18px auto 0;max-width:900px;padding:12px 22px;font-size:14px;line-height:1.8;font-family:'Yu Gothic UI',Meiryo,sans-serif;">&#128241; <b style="color:#18643E;">かんたん版:</b> <a href="app-simple.html" style="color:#18643E;font-weight:bold;">かんたん操作ガイド(簡易版)</a>&nbsp;&nbsp;/&nbsp;&nbsp;<b style="color:#18643E;">Teamsでの操作・承認者(上長・役員)向け:</b> <a href="teams.html" style="color:#18643E;font-weight:bold;">従来の操作マニュアル</a></div>
+<div class="entrybar" style="background:#E8F3ED;border:2px solid #18643E;border-radius:10px;margin:18px auto 0;max-width:900px;padding:16px 22px;font-family:'Yu Gothic UI',Meiryo,sans-serif;"><div style="font-size:15px;color:#18643E;font-weight:bold;margin-bottom:10px;">&#128241; 初めての方・スマートフォンの方は、まず「かんたん操作ガイド」がおすすめです</div><div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;"><a href="app-simple.html" style="display:inline-block;background:#18643E;color:#fff;font-weight:bold;text-decoration:none;padding:10px 18px;border-radius:8px;font-size:15px;">&#9654; かんたん操作ガイドを開く</a><span style="font-size:13px;color:#555;">このページは詳しい説明版です。</span></div><div style="font-size:13px;line-height:1.8;margin-top:10px;border-top:1px solid #c9e0d3;padding-top:8px;"><b style="color:#18643E;">承認者(上長・役員)の方:</b> <a href="teams.html" style="color:#18643E;font-weight:bold;">Teamsでの操作・承認マニュアル</a></div></div>
 
 <div class="page">
 
@@ -323,7 +333,7 @@
 </div>
 
 <footer>
-  商談管理アプリ 操作マニュアル(詳細版)/2026年7月25日 作成/2026年8月7日 改訂/お問い合わせ: 販促企画部 鴻野
+  商談管理アプリ 操作マニュアル(詳細版)/2026年7月25日 作成/2026年8月31日 改訂/お問い合わせ: 販促企画部 鴻野
 </footer>
 
 </body>

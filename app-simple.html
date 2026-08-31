@@ -2,6 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>商談管理アプリ かんたん操作ガイド</title>
 <style>
   :root { --green: #18643E; --green-light: #E8F3ED; --blue: #2C5FA8; --amber: #B87700; --gray: #666; }
@@ -32,13 +33,22 @@
     figure { page-break-inside: avoid; break-inside: avoid; }
     .pagebreak { page-break-before: always; break-before: page; }
   }
+
+/* --- スマホ・タブレット表示の最適化(2026-08-31 追加) --- */
+@media (max-width: 640px) {
+  .page { padding-left: 16px !important; padding-right: 16px !important; }
+  th { white-space: normal !important; }
+  table { table-layout: fixed; width: 100%; word-break: break-word; }
+  h1 { font-size: 22px !important; }
+  h2 { font-size: 18px !important; }
+}
 </style>
 </head>
 <body>
 
 <header class="hero">
   <h1>商談管理アプリ かんたん操作ガイド</h1>
-  <p>申請 → (上長がTeamsで承認) → 商談 → 記録入力、の3ステップ!/2026年8月7日改訂版</p>
+  <p>申請 → (上長がTeamsで承認) → 商談 → 記録入力、の3ステップ!/2026年8月31日改訂版</p>
 </header>
 
 <div class="page">
@@ -105,7 +115,7 @@
 </div>
 
 <footer>
-  商談管理アプリ かんたん操作ガイド/2026年7月25日 作成/2026年8月7日 改訂/お問い合わせ: 販促企画部 鴻野
+  商談管理アプリ かんたん操作ガイド/2026年7月25日 作成/2026年8月31日 改訂/お問い合わせ: 販促企画部 鴻野
 </footer>
 
 </body>
